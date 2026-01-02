@@ -54,6 +54,12 @@ When adding or updating documentation:
 4. Reference related documents using relative links
 5. Update this README if adding new documentation categories
 
+## Architectural Guardrails
+- No UI logic in Core
+- No business logic in Studio
+- No licensing logic in ContentOS Core
+- All features exposed via APIs
+
 ## Maintenance
 
 This repository is actively maintained by the ContentOS engineering team. Documentation should be updated as architectural decisions are made and system design evolves.
