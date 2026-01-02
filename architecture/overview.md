@@ -43,6 +43,57 @@ TechWayFit ContentOS is an enterprise-grade content management system designed f
 - Content editor interface
 - Preview and publishing tools
 
+### Request Flow
+``` mermaid
+flowchart LR
+  Clients --> API --> Core --> Modules
+  Core --> AI
+  Core --> Data
+  Studio --> API
+```
+### Solution Architecture
+``` mermaid
+flowchart TB
+
+  %% Clients
+  C["Clients\n(Web / Mobile / SSG / CLI / Integrations)"]
+
+  %% Optional UX
+  U["Studio (Optional UX)\nAuthor & Admin"]
+
+  %% API Edge
+  A["API Gateway\n(Authoring & Delivery)"]
+
+  %% Core
+  subgraph Core["ContentOS Core"]
+    K1["Content & Schema"]
+    K2["Workflow & Publishing"]
+    K3["Media"]
+    K4["Search"]
+    K5["Security & Policy"]
+    K6["Events"]
+  end
+
+  %% Modules
+  M["Forge Module\n(Blog)"]
+
+  %% AI
+  AI["AI Assistance (Optional)\nContent • SEO • Moderation"]
+
+  %% Data
+  D["Data Layer\nDB • Blob • Search • Vector • Cache"]
+
+  %% Flows
+  C --> A
+  U --> A
+  A --> Core
+  Core --> M
+  M --> Core
+  Core --> AI
+  Core --> D
+
+```
+
 ## Technology Stack
 
 To be defined based on specific implementation decisions documented in ADRs.
