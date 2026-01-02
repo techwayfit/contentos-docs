@@ -12,6 +12,10 @@ TechWayFit ContentOS is an enterprise-grade content management system designed f
 - **Extensibility**: Plugin and extension points for customization
 - **Security**: Defense-in-depth approach with authentication, authorization, and data protection
 
+### Solution Architecture
+
+<img src="ContentOS-SolutionArchitecture.png" alt="Alt text" width="800">
+
 ## High-Level Components
 
 ### Content Management Core
@@ -44,14 +48,6 @@ TechWayFit ContentOS is an enterprise-grade content management system designed f
 - Preview and publishing tools
 
 ### Request Flow
-``` mermaid
-flowchart LR
-  Clients --> API --> Core --> Modules
-  Core --> AI
-  Core --> Data
-  Studio --> API
-```
-### Solution Architecture
 ``` mermaid
 flowchart TB
 
